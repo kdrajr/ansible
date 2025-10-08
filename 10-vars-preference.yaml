@@ -1,14 +1,14 @@
 - name: varaibles preference
   hosts: local
   connection: local
-  vars: 
-    NAME: from play level
-  vars_files:
-    - course.yaml
-  vars_prompt:
-    - name: NAME
-      prompt: what is your NAME?
-      private: false
+  # vars: 
+  #   NAME: from play level
+  # vars_files:
+  #   - course.yaml
+  # vars_prompt:
+  #   - name: NAME
+  #     prompt: what is your NAME?
+  #     private: false
   tasks:
   - name: testing variables preference
     # vars:
@@ -17,8 +17,8 @@
       msg: "Name : {{ NAME }}"
 
 #1. cmdline args
-#2. from task
+#2. from task level
 #3. from files
 #4. from prompt
-#5. from play
+#5. from play level
 #6. from inventory
