@@ -5,7 +5,7 @@
     fruits: apple,banana,orange
     name: "Sivakumar reddy M"
     gmail: Info@GMAIL.COM
-    ipaddress: "19222.168.0.1"
+    ipaddress: "192.168.0.1"
     tags:
       Application: payment
       Environment: dev
