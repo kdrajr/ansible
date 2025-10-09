@@ -28,6 +28,10 @@
     ansible.builtin.debug:
       msg: "{{ listtags | items2dict }}"
 
-  - name: read from yaml and load as variable
+  - name: read from yaml and load into variable
     ansible.builtin.set_fact:
       student_yaml: "{{ lookup('file', 'student.yaml') | from_yaml }}"
+
+  - name: convert yaml into json
+    ansible.builtin.debug:
+      msg: "json: {{ student_yaml | to_json  }}"
