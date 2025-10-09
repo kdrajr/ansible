@@ -3,6 +3,9 @@
   connection: local
   vars:
     fruits: apple,banana,orange
+    name: "Sivakumar reddy M"
+    gmail: Info@GMAIL.COM
+    ipaddress: "19222.168.0.1"
     tags:
       Application: payment
       Environment: dev
@@ -38,5 +41,17 @@
 
   - name: save json to file
     ansible.builtin.copy:
-      dest: ./stundent-data.json
+      dest: ./student-data.json
       content: "{{ student_yaml | to_nice_json  }}"
+
+  - name: convert uppercase
+    ansible.builtin.debug:
+      msg: "{{ name | upper }}"
+
+  - name: convert lowercase
+    ansible.builtin.debug:
+      msg: "{{ gmail | lower }}"
+
+  # - name: check IP is valid or not
+  #   ansible.builtin.debug: 
+  #     msg: "{{ ipaddress | ansible.utils.ipv4 }}"
